@@ -1,0 +1,206 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 20 14:30:25 2020
+
+@author: ASUS
+"""
+import random
+import time
+from fractions import Fraction
+def Arithmetic1():
+    sign=['+','-','×','÷']
+    s=random.randint(0,1)
+    num1=random.randint(1,10)
+    num2=random.randint(1,10)
+    result=0
+    if s==0:#加法
+        result=num1+num2
+    elif s==1:#减法
+        num1, num2 = max(num1, num2), min(num1, num2)
+        result=num1-num2
+    print('问题是:',num1,sign[s],num2,'= ',end='')
+    return result
+def Arithmetic2():
+    sign=['+','-','×','÷']
+    s=random.randint(0,3)
+    num1=random.randint(1,10)
+    num2=random.randint(1,10)
+    result=0
+    if s==0:#加法
+        result=num1+num2
+    elif s==1:#减法
+        num1, num2 = max(num1, num2), min(num1, num2)
+        result=num1-num2
+    elif s==2:#乘法
+        result=num1*num2
+    elif s==3:#除法
+        result=num1/num2
+    print('问题是:',num1,sign[s],num2,'= ',end='')
+    return result
+def Arithmetic3():
+    sign=['+','-','×','÷']
+    s=random.randint(0,3)
+    num1=random.randint(1,20)
+    num2=random.randint(1,20)
+    result=0
+    if s==0:#加法
+        result=num1+num2
+    elif s==1:#减法
+        num1, num2 = max(num1, num2), min(num1, num2)
+        result=num1-num2
+    elif s==2:#乘法
+        result=num1*num2
+    elif s==3:#除法
+        result=num1/num2
+    print('问题是:',num1,sign[s],num2,'= ',end='')
+    return result
+def Arithmetic4():
+    sign=['+','-','×','÷']
+    s=random.randint(0,3)
+    num1=random.randint(1,99)
+    num2=random.randint(1,10)
+    result=0
+    if s==0:#加法
+        result=num1+num2
+    elif s==1:#减法
+        num1, num2 = max(num1, num2), min(num1, num2)
+        result=num1-num2
+    elif s==2:#乘法
+        result=num1*num2
+    elif s==3:#除法
+        result=num1/num2
+    print('问题是:',num1,sign[s],num2,'= ',end='')
+    return result
+def Arithmetic5():#五年级以上加了分数相乘除
+    sign=['+','-','×','÷','×','÷']
+    s=random.randint(0,5)
+    num1=random.randint(1,99)
+    num2=random.randint(1,99)
+    num3=random.randint(1,20)
+    num4=random.randint(1,20)
+    num5=random.randint(1,20)
+    num6=random.randint(1,20)
+    result=0
+    if s==0:#加法
+        result=num1+num2
+    elif s==1:#减法
+        num1, num2 = max(num1, num2), min(num1, num2)
+        result=num1-num2
+    elif s==2:#乘法
+        num1=Fraction(num3,num4)
+        num2=Fraction(num5,num6)
+        result=num1*num2
+    elif s==3:#除法
+        num1=Fraction(num3,num4)
+        num2=Fraction(num5,num6)
+        result=num1/num2
+    elif s==4:
+        result=num1*num2
+    elif s==5:
+        result=num1/num2
+    print('问题是:',num1,sign[s],num2,'= ',end='')
+    return result
+def Arithmetic6():#五年级以上加了分数相乘除
+    sign=['+','-','×','÷','×','÷']
+    s=random.randint(0,5)
+    num1=random.randint(1,199)
+    num2=random.randint(1,99)
+    num3=random.randint(1,20)
+    num4=random.randint(1,20)
+    num5=random.randint(1,20)
+    num6=random.randint(1,20)
+    result=0
+    if s==0:#加法
+        result=num1+num2
+    elif s==1:#减法
+        num1, num2 = max(num1, num2), min(num1, num2)
+        result=num1-num2
+    elif s==2:#乘法
+        num1=Fraction(num3,num4)
+        num2=Fraction(num5,num6)
+        result=num1*num2
+    elif s==3:#除法
+        num1=Fraction(num3,num4)
+        num2=Fraction(num5,num6)
+        result=num1/num2
+    elif s==4:
+        result=num1*num2
+    elif s==5:
+        result=num1/num2
+    print('问题是:',num1,sign[s],num2,'= ',end='')
+    return result
+
+print('请选择您所在年级,年级N=1,2,3,4,5,6')
+print('我选择年级N=')
+N=int(input())
+print('请输入您要练习的次数n=')
+n=int(input())
+print('####################################')
+if N==1:
+    while (n>0):
+        n-=1
+        print('------------------------------------')
+        result=Arithmetic1()
+        InputResult=input()
+        Input=int(InputResult)
+        if Input==result:
+            print('回答正确')
+        else:
+            print('回答错误，正确答案是:',result)
+        
+if N==2:
+    while (n>0):
+        n-=1
+        print('------------------------------------')
+        result=Arithmetic2()
+        InputResult=input()
+        Input=int(InputResult)
+        if Input==result:
+            print('回答正确')
+        else:
+            print('回答错误，正确答案是:',result)
+if N==3:
+    while (n>0):
+        n-=1
+        print('------------------------------------')
+        result=Arithmetic3()
+        InputResult=input()
+        Input=int(InputResult)
+        if Input==result:
+            print('回答正确')
+        else:
+            print('回答错误，正确答案是:',result)
+if N==4:
+    while (n>0):
+        n-=1
+        print('------------------------------------')
+        result=Arithmetic4()
+        InputResult=input()
+        Input=int(InputResult)
+        if Input==result:
+            print('回答正确')
+        else:
+            print('回答错误，正确答案是:',result)
+if N==5:
+    while (n>0):
+        n-=1
+        print('------------------------------------')
+        result=Arithmetic5()
+        InputResult=input()
+        Input=InputResult
+        if Input==result:
+            print('回答正确')
+        else:
+            print('回答错误，正确答案是:',result)
+if N==6:
+    while (n>0):
+        n-=1
+        print('------------------------------------')
+        result=Arithmetic6()
+        InputResult=input()
+        Input=InputResult
+        if Input==result:
+            print('回答正确')
+        else:
+            print('回答错误，正确答案是:',result)
+print('------------------------------------')
